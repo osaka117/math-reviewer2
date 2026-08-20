@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@layer base {
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+.katex-wrapper .katex {
+  font-size: 1.05em;
+}
+
+.katex-wrapper .katex-display {
+  margin: 0.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}

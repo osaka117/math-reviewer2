@@ -1,0 +1,6 @@
+{
+  "name": "Math Practice",
+  "description": "A single-page math practice application that analyzes uploaded study materials to generate level-adaptive practice problems with detailed step-by-step solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
