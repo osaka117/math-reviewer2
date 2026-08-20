@@ -4,8 +4,9 @@ import { DEFAULT_MATH_TOPICS } from './sampleData';
 
 // Configure pdfjs worker for browser/client-side static execution
 try {
-  // Use cloudflare CDN worker or standard inline worker
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version || '4.10.38'}/pdf.worker.min.mjs`;
+  if (typeof window !== 'undefined' && pdfjsLib && pdfjsLib.GlobalWorkerOptions) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs`;
+  }
 } catch (e) {
   console.warn('PDF.js worker initialization notice:', e);
 }
